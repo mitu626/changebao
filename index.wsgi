@@ -1,5 +1,4 @@
 import sae
-sae.add_vendor_dir("vendor")
 from changebao import wsgi
 
 def app(environ,start_response):
