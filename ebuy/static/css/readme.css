@@ -1,0 +1,15 @@
+#main{
+    margin: 30px 120px 200px 60px;
+    font-family: enFont;
+    font-size: 1.2em;
+    font-weight:500;
+}
+#main h3{
+    font-family: a0Font;
+    line-height:60px;
+    font-size: 1.5em;
+    font-weight:900;
+}
+#first:first-letter{
+    font-size:1.5em;
+}

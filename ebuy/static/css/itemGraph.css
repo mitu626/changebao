@@ -1,0 +1,32 @@
+.pictures{
+    width:320px;
+    height:220px;
+    position: relative;
+    border:1px solid #aaa;
+    overflow: hidden;
+    margin:0 auto;
+}
+.pictures img{
+    width:320px;
+    height:220px;
+    float:left;
+}
+.pictures #tags{
+    position: absolute;
+    bottom:5px;
+    right:8px;
+}
+.pictures #tags div{
+    float:left;
+    border:1.3px solid #ddd;
+    width:20px;
+    height: 20px;
+    margin-right:10px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #fff;
+    cursor:pointer;
+}
+.pictures #tags div:hover{
+    background-color: #f00;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布商品</title>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <link rel="stylesheet" href="/static/css/head_foot.css"/>
+    <link rel="stylesheet" href="/static/css/createItemIndex.css"/>
+    <script type="text/javascript" src="/static/js/changePic.js"></script>
+    <script type="text/javascript" src="/static/js/changeSelector.js"></script>
+</head>
+<body>
+<header>
+    <h1><a href="http://changebao.com">ChangeBao</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/login.html">登录</a></li>
+            <li><a href="/register.html">注册</a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">说明</a></li>
+        </ul>
+    </nav>
+</header>
+<nav id="user">
+    <ul>
+        <li><a href="/secretIndex/">人气秘籍</a></li>
+        <li><a href="/historyIndex/">历史购买</a></li>
+        <li><a href="/createItemIndex/">发布新品</a></li>
+        <li><a href="/searchIndex/">找同学</a></li>
+        <li><a href="/searchIndex/">找宝贝</a></li>
+    </ul>
+</nav>
+<div id="main">
+    <div id="userInfo">
+        <img src="/media/{{ user.headImg }}" alt="this is for test"/>
+        <ul>
+            <li>姓名:{{ user.name}}</li>
+            <li>院系:{{ user.sdept}}</li>
+            <li>活跃度:80 热度:100</li>
+            <li>在线商品:5</li>
+            <li>累计成交:200</li>
+        </ul>
+    </div>
+    <div id="createItem">
+        <h3>发布商品</h3>
+        <form action="/createItemIndex/" method="post" enctype="multipart/form-data">
+            <section>
+                <label for="itemName">商品名称</label>
+                <input type="text" name="itemName"/>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择商品名称填入，不超过15个字</p>
+            </section>
+            <section>
+                <label for="itemClass">商品类别</label>
+                <select name="itemClass1" id="itemClass" onchange="change(event)">
+                    <option value="1">程序设计</option>
+                    <option value="2">计算机哲学</option>
+                    <option value="3" selected="selected">算法|数据</option>
+                    <option value="4">理论知识</option>
+                </select>
+                <select name="itemClass2" id="itemClass2">
+                    <option value="0" selected="selected">---请选择---</option>
+                    <option value="31">数据结构</option>
+                    <option value="32">算法设计</option>
+                    <option value="33">数据挖掘|人工智能</option>
+                </select>
+                <select name="itemClass3" id="itemClass3">
+                    <option value="A">---请选择---</option>
+                </select>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择合适的商品类别</p>
+            </section>
+            <section>
+                <label for="itemDate">发布日期</label>
+                <input type="date" id="itemDate" name="createDate"/>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请选择发布日期，例：2016-4-28</p>
+            </section>
+            <section id="loadPictureWrapper">
+                <label for="loadPicture">上传图片</label>
+                <a href="javascript:;" class="upload" name="loadPicture"><input type="file" name="itemPic1" onchange="changePic(event,1,this.form.itemPic1)"/>选择图片</a>
+                <a href="javascript:;" class="upload"><input type="file" name="itemPic2" onchange="changePic(event,2,this.form.itemPic2)"/>选择图片</a>
+                <a href="javascript:;" class="upload"><input type="file" name="itemPic3" onchange="changePic(event,3,this.form.itemPic3)"/>选择图片</a>
+                <a href="javascript:;" class="upload"><input type="file" name="itemPic4" onchange="changePic(event,4,this.form.itemPic4)"/>选择图片</a>
+                <div id="preShow">
+                    <img src="/static/pictures/myhead.jpg" alt="图片预览" class="preShowPic"/>
+                    <img src="/static/pictures/myhead.jpg" alt="图片预览" class="preShowPic"/>
+                    <img src="/static/pictures/myhead.jpg" alt="图片预览" class="preShowPic"/>
+                    <img src="/static/pictures/myhead.jpg" alt="图片预览" class="preShowPic"/>
+                </div>
+            </section>
+            <section id="descriptionWrapper">
+                <label for="description">商品描述</label>
+                <textarea name="description" id="description" cols="70" rows="8" placeholder="   请添加对商品的描述"></textarea>
+            </section>
+            <section>
+                <a class="upload button"><input type="submit" value="发布商品"/></a>
+            </section>
+        </form>
+    </div>
+</div>
+<div class="clean"></div>
+<footer>
+    <div id="foot_line"></div>
+    <ul>
+        <li>友情链接
+            <ul>
+                <li><a href="#">太原理工大学教务处</a></li>
+                <li><a href="#">太原理工大学勤工助学网站</a></li>
+                <li><a href="#">太原理工大学招就处</a></li>
+                <li><a href="#">龙城学习网站</a></li>
+                <li>太原理工大学学院网站
+                    <ul>
+                        <li><a href="#">计算机学院</a></li>
+                        <li><a href="#">材料学院</a></li>
+                        <li><a href="#">现代科技学院</a></li>
+                        <li><a href="#">马克思学院</a></li>
+                        <li><a href="#">数学学院</a></li>
+                        <li><a href="#">经济管理学院</a></li>
+                        <li><a href="#">软件学院</a></li>
+                        <li><a href="#">信息学院</a></li>
+                        <li><a href="#">建工学院</a></li>
+                        <li><a href="#">外国语学院</a></li>
+                        <li><a href="#">矿业学院</a></li>
+                        <li><a href="#">美术学院</a></li>
+                        <li><a href="#">音乐学院</a></li>
+                        <li><a href="#">体育学院</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            工大社区
+            <ul>
+                <li><a href="#">百度贴吧</a></li>
+            </ul>
+        </li>
+        <li>推荐阅读
+            <ul>
+                <li><a href="#">数学之美</a></li>
+                <li><a href="#">不能承受的生命之轻</a></li>
+                <li><a href="#">css设计指南</a></li>
+                <li><a href="#">编程之美</a></li>
+                <li><a href="#">JavaScript高级程序设计</a></li>
+            </ul>
+        </li>
+        <li>联系我们
+            <ul>
+                <li><a href="#">新浪微博</a></li>
+                <li><a href="#">微信公众号</a></li>
+                <li><a href="#">github地址</a></li>
+                <li><a href="#">osChina博客</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="ending_line">
+        <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+    </div>
+</footer>
+</body>
+</html>

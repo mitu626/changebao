@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录后</title>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <link rel="stylesheet" href="/static/css/head_foot.css"/>
+    <link rel="stylesheet" href="/static/css/userIndex.css"/>
+    <link rel="stylesheet" href="/static/css/graph.css"/>
+</head>
+<body>
+    <header>
+        <h1><a href="http://changebao.com">ChangeBao</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/login/">登录</a></li>
+                <li><a href="/register/">注册</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/readMe/">说明</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="user">
+        <div class="userInfo">
+            <img src="/media/{{user.headImg}}" alt="用户头像"/>
+            <div>
+                <li>姓名:{{user.name}}</li>
+                <li>院系:{{sdept}}</li>
+                <li>活跃度:{{ userEval.liveness }} 热度:{{ userEval.hotness}}</li>
+                <li>在线商品:{{ num }}</li>
+                <li>累计评论:{{ userEval.participation }}</li>
+            </div>
+        </div>
+        <ul>
+            <li><a href="/secretIndex/">人气秘籍</a></li>
+            <li><a href="/user/index/">个人首页</a></li>
+            <li><a href="/createItemIndex/">发布新品</a></li>
+            <li><a href="/searchIndex/">找同学</a></li>
+            <li><a href="/searchIndex/">找宝贝</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div id="sysMessage">
+            <h2>系统公告</h2>
+            <p>{{ sysMsg }}</p>
+        </div>
+        <div id="myitems">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已发布宝贝</p>
+            {% for item in items %}
+                <article>
+                    <a href="/itemIndex/?itemId={{ item.itemId }}"><img src="/media/{{ item.pic1 }}" alt="" class="item"/></a>
+                    <p>{{ item.itemName }}</p>
+                </article>
+            {% endfor %}
+        </div>
+        <div id="recommendation">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;推荐宝贝</p>
+            {% for item in recItems %}
+                <article>
+                    <a href="/itemIndex/?itemId={{ item.itemId }}">
+                        <img src="/media/{{ item.pic1 }}" alt="推荐物品" class="item"/>
+                        <p>{{ item.itemName }}</p>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="aside">
+        <h3>可视化用户</h3>
+        <section class="graph_1">
+            <div>
+                <h5>参与度：</h5><div id="graph_1_1" title="参与度"></div>
+                <h5>活跃度：</h5><div id="graph_1_2" title="活跃度"></div>
+                <h5>信任度：</h5><div id="graph_1_3" title="信任度"></div>
+            </div>
+            <div id="graph_1_4"><span id="zero">0</span><span id="hundred">100</span></div>
+        </section>
+        <section class="graph">
+            <h5>兴趣标签云</h5>
+            <div>
+
+            </div>
+        </section>
+        <section class="graph">
+            <h5>历史交易柱状图</h5>
+            <div>
+
+            </div>
+        </section>
+    </div>
+    <div class="clean"></div>
+    <footer>
+        <div id="foot_line"></div>
+        <ul>
+            <li>友情链接
+                <ul>
+                    <li><a href="#">太原理工大学教务处</a></li>
+                    <li><a href="#">太原理工大学勤工助学网站</a></li>
+                    <li><a href="#">太原理工大学招就处</a></li>
+                    <li><a href="#">龙城学习网站</a></li>
+                    <li>太原理工大学学院网站
+                        <ul>
+                            <li><a href="#">计算机学院</a></li>
+                            <li><a href="#">材料学院</a></li>
+                            <li><a href="#">现代科技学院</a></li>
+                            <li><a href="#">马克思学院</a></li>
+                            <li><a href="#">数学学院</a></li>
+                            <li><a href="#">经济管理学院</a></li>
+                            <li><a href="#">软件学院</a></li>
+                            <li><a href="#">信息学院</a></li>
+                            <li><a href="#">建工学院</a></li>
+                            <li><a href="#">外国语学院</a></li>
+                            <li><a href="#">矿业学院</a></li>
+                            <li><a href="#">美术学院</a></li>
+                            <li><a href="#">音乐学院</a></li>
+                            <li><a href="#">体育学院</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                工大社区
+                <ul>
+                    <li><a href="#">百度贴吧</a></li>
+                </ul>
+            </li>
+            <li>推荐阅读
+                <ul>
+                    <li><a href="#">数学之美</a></li>
+                    <li><a href="#">不能承受的生命之轻</a></li>
+                    <li><a href="#">css设计指南</a></li>
+                    <li><a href="#">编程之美</a></li>
+                    <li><a href="#">JavaScript高级程序设计</a></li>
+                </ul>
+            </li>
+            <li>联系我们
+                <ul>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">github地址</a></li>
+                    <li><a href="#">osChina博客</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="ending_line">
+            <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+        </div>
+    </footer>
+</body>
+</html>

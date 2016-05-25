@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看商品</title>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <link rel="stylesheet" href="/static/css/head_foot.css"/>
+    <link rel="stylesheet" href="/static/css/itemIndex.css"/>
+    <link rel="stylesheet" href="/static/css/itemGraph.css"/>
+    <link rel="stylesheet" href="/static/css/wangEditor.css">
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/wangEditor.min.js"></script>
+    <script type="text/javascript" src="/static/js/commentCreate.js"></script>
+</head>
+<body>
+<header>
+    <h1><a href="http://changebao.com">ChangeBao</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/login/">登录</a></li>
+            <li><a href="/register/">注册</a></li>
+            <li><a href="/">首页</a></li>
+            <li><a href="/secretIndex/">说明</a></li>
+        </ul>
+    </nav>
+</header>
+<nav id="user">
+    <ul>
+        <li><a href="/secretIndex/">人气秘籍</a></li>
+        <li><a href="/user/index">个人首页</a></li>
+        <li><a href="/createItemIndex/">发布新品</a></li>
+        <li><a href="/searchIndex/">找同学</a></li>
+        <li><a href="/searchIndex/">找宝贝</a></li>
+    </ul>
+</nav>
+<div id="main">
+    <div id="item">
+        <section id="info">
+            <div id="left">
+                <div class="pictures">
+                    <img src="/media/{{ item.pic1 }}" title="pic_1"/>
+                    <img src="/media/{{ item.pic2 }}" title="pic_2"/>
+                    <img src="/media/{{ item.pic3 }}" title="pic_3"/>
+                    <img src="/media/{{ item.pic4 }}" title="pic_4"/>
+                </div>
+            </div>
+            <div id="right">
+                <p>{{ item.itemName }}</p>
+                <ul>
+                    <li>分类标签：{{ itemClass1 }},{{ itemClass2 }},{{ itemClass3 }}</li>
+                    <li>类别：书籍</li>
+                    <li>所属用户：{{ userName }}</li>
+                    <li>发布日期：{{ item.createDate }}</li>
+                </ul>
+                <div class="direction">
+                    <span>是否在售:{{ item.state }}</span><span>热度：70</span><span>关注度：203</span>
+                </div>
+            </div>
+        </section>
+        <div class="clean"></div>
+        <section id="comment">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;用户评论区</p>
+            {% if comments|length %}
+                {% for i in comments %}
+                    <article cid="{{ i.commentId }}">
+                        <blockquote><a href="/user/index/?userId={{ i.frId }}">{{ i.fr }}:</a>{{ i.content }}
+                            <span class="answer" title="回复" toId="{{ i.frId }}" onclick="createTextarea(event)">...</span>
+                        </blockquote>
+                        <div class="content">
+                            {% for j in i.childComment %}
+                                <p>
+                                    <a href="/user/index/?userId={{ j.frId }}">{{ j.fr}}</a>回复
+                                    <a href="/user/index/?userId={{ j.toId }}">{{ j.to}}</a>
+                                    {{ j.content }}
+                                    <span class="answer" title="回复" toId="{{ j.frId }}" onclick="createTextarea(event)">...</span>
+                                </p>
+                            {% endfor %}
+                        </div>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <article>
+                    <h5>该物品暂时没有评论</h5>
+                </article>
+            {% endif %}
+            <form action="#">
+            <textarea id='textarea1' style='height:220px; max-height:400px; width:100%;'>
+                <p>请输入您的评论信息</p>
+	        </textarea>
+            <input type="button" value="回复" class="button" onclick="answer(event)">
+            </form>
+        </section>
+    </div>
+    <div id="recommendation">
+        <p>&nbsp;&nbsp;&#8226;&nbsp;推荐商品</p>
+        {% for itemRec in results %}
+            {% if itemRec.userId.itemId != item.itemId%}
+            <article>
+                <a href="/itemIndex/?itemId={{ itemRec.userId.itemId }}" title="点击查看--{{ itemRec.userId.itemName }}--详细信息，参与评论"><img src="/media/{{ itemRec.userId.pic1 }}" alt="推荐物品"></a>
+            </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div class="clean"></div>
+<footer>
+    <div id="foot_line"></div>
+    <ul>
+        <li>友情链接
+            <ul>
+                <li><a href="#">太原理工大学教务处</a></li>
+                <li><a href="#">太原理工大学勤工助学网站</a></li>
+                <li><a href="#">太原理工大学招就处</a></li>
+                <li><a href="#">龙城学习网站</a></li>
+                <li>太原理工大学学院网站
+                    <ul>
+                        <li><a href="#">计算机学院</a></li>
+                        <li><a href="#">材料学院</a></li>
+                        <li><a href="#">现代科技学院</a></li>
+                        <li><a href="#">马克思学院</a></li>
+                        <li><a href="#">数学学院</a></li>
+                        <li><a href="#">经济管理学院</a></li>
+                        <li><a href="#">软件学院</a></li>
+                        <li><a href="#">信息学院</a></li>
+                        <li><a href="#">建工学院</a></li>
+                        <li><a href="#">外国语学院</a></li>
+                        <li><a href="#">矿业学院</a></li>
+                        <li><a href="#">美术学院</a></li>
+                        <li><a href="#">音乐学院</a></li>
+                        <li><a href="#">体育学院</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            工大社区
+            <ul>
+                <li><a href="#">百度贴吧</a></li>
+            </ul>
+        </li>
+        <li>推荐阅读
+            <ul>
+                <li><a href="#">数学之美</a></li>
+                <li><a href="#">不能承受的生命之轻</a></li>
+                <li><a href="#">css设计指南</a></li>
+                <li><a href="#">编程之美</a></li>
+                <li><a href="#">JavaScript高级程序设计</a></li>
+            </ul>
+        </li>
+        <li>联系我们
+            <ul>
+                <li><a href="#">新浪微博</a></li>
+                <li><a href="#">微信公众号</a></li>
+                <li><a href="#">github地址</a></li>
+                <li><a href="#">osChina博客</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="ending_line">
+        <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="/static/js/itemGraph.js"></script>
+<script type="text/javascript">
+    $(function(){
+			var editor = $('#textarea1').wangEditor();
+		});
+</script>
+</html>

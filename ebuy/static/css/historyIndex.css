@@ -1,0 +1,101 @@
+nav#user{
+    width:100%;
+    height: 40px;
+    background-color: khaki;
+    font-family: a0Font;
+    position:relative;
+    border-top: 1px solid khaki;
+}
+nav#user ul{
+    margin-right: 100px;
+    margin-top:12px;
+}
+nav#user  ul li{
+    list-style-type: none;
+    float: right;
+    line-height: 22px;
+    padding-right:10px;
+    padding-left:10px;
+    font-family: a0Font;
+    font-weight: 700;
+    border-right: 1px solid #000000;
+}
+nav#user  ul li:first-child{
+    border:0px;
+}
+#userInfo{
+
+    width:150px;
+    float:left;
+    position:relative;
+    margin-left:40px;
+    padding:15px;
+    background-color:antiquewhite;
+    border-radius:0px 0px 15px 15px;
+    box-shadow: -5px 8px  0px #eeeeee;
+}
+#userInfo ul{
+    margin-top:100px;
+    list-style-type: none;
+
+}
+#userInfo img{
+    width:80px;
+    height:120px;
+    position:absolute;
+    top:-20px;
+    left:15px;
+}
+#history{
+    float:left;
+    padding:25px;
+}
+article{
+    border:2px dotted cornflowerblue;
+    overflow: hidden;
+    padding:10px 10px;
+    border-radius:15px;
+    margin-bottom:10px;
+}
+#history p{
+    font-family: b0px;
+    font-size:1.1em;
+}
+.left{
+    width:340px;
+    float:left;
+}
+.direction{
+    line-height:40px;
+    text-align: left;
+    font-family: a0Font;
+    font-size:1.0em;
+    font-weight: 100;
+    margin-left:20px;
+    font-weight:700;
+}
+.direction span{
+    margin-left:15px;
+}
+.direction span:first-child{
+    margin-left:0px;
+}
+.right{
+    float:left;
+}
+.right ul{
+    margin-left:20px;
+}
+.right ul li{
+    list-style-type: none;
+    line-height: 25px;
+    font-family: a0Font;
+}
+.right p{
+    font-family: a0Font;
+    margin-top:15px;
+    margin-left:20px;
+    line-height:45px;
+    font-size:1.5em;
+    font-weight:700;
+}

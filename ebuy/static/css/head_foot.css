@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    height: 50px;
+    width: 100%;
+    background-color: brown;
+}
+header h1{
+    float:left;
+    padding:5px 60px;
+    font-family: enFont;
+}
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+header nav ul{
+    float: right;
+    margin-right: 45px;
+    margin-top:14px;
+}
+header nav  ul li{
+    float:left;
+    list-style-type: none;
+    padding:0px 12px;
+    border-right:1px solid #000;
+    font-family: enFont;
+    font-size: 1.0em;
+    font-weight: 700;
+}
+header nav ul li:last-child{
+    border:0px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+header nav ul li a:hover{
+    color: #ddd;
+}
+footer{
+    height: 350px;
+    overflow: hidden;
+    background-color: darkslategrey;
+    position: relative;
+}
+footer li a{
+    text-decoration: none;
+    color:#000000;
+    display: block;
+}
+footer div#foot_line{
+    position:absolute;
+    left:20%;
+    top:30px;
+    height:4px;
+    width:60%;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+footer div#ending_line{
+    clear: both;
+    margin-left:10%;
+    margin-top:24%;
+    border-top:0.5px solid #FFFFFF;
+    width:80%;
+    text-align: center;
+    padding-top:3px;
+    font-family: enFont;
+    font-size: 0.9em;
+    color: #bbbbbb;
+}
+footer ul{
+    padding:50px 0px 0px 120px;
+}
+footer ul li:hover{
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+footer ul li{
+    float:left;
+    list-style-type: none;
+    width:200px;
+    margin-right: 10px;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+}
+footer ul li:last-child{
+    margin-right: 0px;
+}
+footer ul li>ul{
+    padding:0px;
+    margin:0px;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+}
+footer ul li ul li ul{
+    display: none;
+}
+footer ul li ul li{
+    margin-bottom:5px;
+    margin-top:5px;
+}
+footer ul li ul li ul>li{
+    float:left;
+}
+footer ul li:first-child ul li:last-child:hover{
+    border-radius: 15px 15px 0px 0px;
+}
+footer ul li ul li ul li{
+    width:100px;
+}
+footer ul li ul li:hover > ul{
+    display: block;
+    background-color: aliceblue;
+    position: absolute;
+    padding-top: 5px;
+    top:20px;
+    left:0px;
+    width:790px;
+    border-radius: 0px 20px 20px 20px;
+}
+footer ul li ul li ul li:hover a{
+    display: block;
+    color: darkcyan;
+}
+.clean{
+    clear:both;
+}

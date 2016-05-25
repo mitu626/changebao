@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChangeBao</title>
+    <link rel="stylesheet" href="static/css/font_load.css"/>
+    <link rel="stylesheet" href="static/css/head_foot.css"/>
+    <link rel="stylesheet" href="static/css/index.css"/>
+    <script type="text/javascript" src="static/js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="http://changebao.com">ChangeBao</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/login/">登录</a></li>
+                <li><a href="/register/">注册</a></li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/secretIndex/">说明</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <div id="bg"></div>
+        <section class="item" id="item1">
+            <div title="click to see more about 新生汪" onclick="showMore(event,1)"></div>
+            <p title="click to see more about 新生汪" onclick="showMore(event,1)">新生汪</p>
+        </section>
+        <section class="item" id="item2">
+            <div title="click to see more about 成年汪" onclick="showMore(event,2)"></div>
+            <p title="click to see more about 成年汪" onclick="showMore(event,2)">成年汪</p>
+        </section>
+        <section class="item" id="item3">
+            <div title="click to see more about 毕业汪" onclick="showMore(event,3)"></div>
+            <p title="click to see more about 毕业汪" onclick="showMore(event,3)">毕业汪</p>
+        </section>
+        <section class="item" id="item4">
+            <div title="click to see more about 教师汪" onclick="showMore(event,4)"></div>
+            <p title="click to see more about 教师汪" onclick="showMore(event,4)">教师汪</p>
+        </section>
+    </div>
+    <div id="first">
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>新生汪</p>
+                    <p>懵懵懂懂就来了大学</p>
+                    <p>新奇而陌生</p>
+                    <p>你还稚气未脱吧</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/a1.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>看</p>
+                    <p>你鼻子下的两撇小胡子</p>
+                    <p>到处搜索的眼神</p>
+                    <p>脚下的帆布鞋</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/a2.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>你好</p>
+                    <p>其实，我也是新生</p>
+                    <p>既然如此</p>
+                    <p>何不交个朋友</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/a3.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="second">
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>成年汪</p>
+                    <p>我想</p>
+                    <p>你不仅是个成年汪</p>
+                    <p>你还是个。。。。。。</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/b1.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>单身汪</p>
+                    <p>奋斗汪</p>
+                    <p>矛盾汪</p>
+                    <p>一致迷惘的汪</p>
+                    <p>或者</p>
+                    <p>只是一只简单的汪</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/b2.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>何不来这里</p>
+                    <p>买一次醉</p>
+                    <p>也许</p>
+                    <p>真的会醒呢</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/b3.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="third">
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>毕业汪</p>
+                    <p>终于等到你</p>
+                    <p>骚年</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/c1.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>马上毕业了</p>
+                    <p>你准备带走什么</p>
+                    <p>你又准备留下什么</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/c2.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="moreContent">
+            <div class="innerLine">
+                <div class="words">
+                    <p>change your items</p>
+                    <p>也许</p>
+                    <p>会有意想不到的收获</p>
+                </div>
+                <div class="pictures">
+                    <img src="/static/pictures/c3.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loginOrRegister">
+        已有账号?直接<a href="/login/">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        我要马上<a href="/register/">注册</a>
+    </div>
+    <footer>
+        <div id="foot_line"></div>
+        <ul>
+            <li>友情链接
+                <ul>
+                    <li><a href="#">太原理工大学教务处</a></li>
+                    <li><a href="#">太原理工大学勤工助学网站</a></li>
+                    <li><a href="#">太原理工大学招就处</a></li>
+                    <li><a href="#">龙城学习网站</a></li>
+                    <li>太原理工大学学院网站
+                        <ul>
+                            <li><a href="#">计算机学院</a></li>
+                            <li><a href="#">材料学院</a></li>
+                            <li><a href="#">现代科技学院</a></li>
+                            <li><a href="#">马克思学院</a></li>
+                            <li><a href="#">数学学院</a></li>
+                            <li><a href="#">经济管理学院</a></li>
+                            <li><a href="#">软件学院</a></li>
+                            <li><a href="#">信息学院</a></li>
+                            <li><a href="#">建工学院</a></li>
+                            <li><a href="#">外国语学院</a></li>
+                            <li><a href="#">矿业学院</a></li>
+                            <li><a href="#">美术学院</a></li>
+                            <li><a href="#">音乐学院</a></li>
+                            <li><a href="#">体育学院</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                工大社区
+                <ul>
+                    <li><a href="#">百度贴吧</a></li>
+                </ul>
+            </li>
+            <li>推荐阅读
+                <ul>
+                    <li><a href="#">数学之美</a></li>
+                    <li><a href="#">不能承受的生命之轻</a></li>
+                    <li><a href="#">css设计指南</a></li>
+                    <li><a href="#">编程之美</a></li>
+                    <li><a href="#">JavaScript高级程序设计</a></li>
+                </ul>
+            </li>
+            <li>联系我们
+                <ul>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">github地址</a></li>
+                    <li><a href="#">osChina博客</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="ending_line">
+            <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找商品</title>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <link rel="stylesheet" href="/static/css/head_foot.css"/>
+    <link rel="stylesheet" href="/static/css/searchIndex.css"/>
+    <script type="text/javascript" src="/static/js/changeSelector.js"></script>
+    <script type="text/javascript" src="/static/js/search.js"></script>
+</head>
+<body>
+<header>
+    <h1><a href="http://changebao.com">ChangeBao</a></h1>
+    <nav>
+        <ul>
+            <li><a href="/login.html">登录</a></li>
+            <li><a href="/register.html">注册</a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">说明</a></li>
+        </ul>
+    </nav>
+</header>
+<nav id="user">
+    <ul>
+        <li><a href="/secretIndex/">人气秘籍</a></li>
+        <li><a href="/user/index/">个人首页</a></li>
+        <li><a href="/createItemIndex/">发布新品</a></li>
+        <li><a href="/searchIndex/">找同学</a></li>
+        <li><a href="/searchIndex/">找宝贝</a></li>
+    </ul>
+</nav>
+<div id="main">
+    <div id="userInfo">
+        <img src="/media/{{ user.headImg }}" alt="this is for test"/>
+        <ul>
+            <li>姓名:{{ user.name }}</li>
+            <li>院系:{{ sdept }}</li>
+            <li>活跃度:{{ userEval.liveness }} 热度:{{ userEval.hotness}}</li>
+            <li>在线商品:{{ num }}</li>
+            <li>累计评论:{{ userEval.participation }}</li>
+        </ul>
+    </div>
+    <div id="search">
+        <div id="searchItem">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;找宝贝</h5>
+            <form action="#">
+                <section>
+                    <lable for="itemNum">物品货号:</lable>
+                    <input type="text" name="itemNum" placeholder="#653217"/>
+                    <input type="button" value="查找" onclick="search1(event)"/>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据物品货号精确查找</p>
+                </section>
+                <section>
+                    <lable for="itemClass">商品类别:</lable>
+                    <select name="itemClass" id="class1" onchange="searchChange(event)">
+                        <option value="1">程序设计</option>
+                        <option value="2">计算机哲学</option>
+                        <option value="3" selected="selected">算法|数据</option>
+                        <option value="4">理论知识</option>
+                    </select>
+                    <select name="itemClass2" id="class2">
+                        <option value="0" selected="selected">---请选择---</option>
+                        <option value="31">数据结构</option>
+                        <option value="32">算法设计</option>
+                        <option value="33">数据挖掘|人工智能</option>
+                    </select>
+                    <select name="itemClass3" id="class3">
+                        <option value="A">---请选择---</option>
+                    </select>
+                    <input type="button" value="查找" onclick="search2(event)"/>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据商品类别查找</p>
+                </section>
+            </form>
+        </div>
+        <div id="searchPeople">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;找同学</h5>
+            <form action="#">
+                <section>
+                    <lable for="peopleNum">同学学号:</lable>
+                    <input type="text" name="peopleNum" placeholder="2012001732"/>
+                    <input type="button" value="查找" onclick="alert('功能暂未实现')"/>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据同学学号精确查找</p>
+                </section>
+                <section>
+                    <lable for="peopleClass">所属系别:</lable>
+                    <select name="peopleClass" id="peopleClass1">
+                        <option value="计算机学院" selected="selected">计算机学院</option>
+                        <option value="材料学院">材料学院</option>
+                        <option value="马克思学院">马克思学院</option>
+                        <option value="数学学院">数学学院</option>
+                        <option value="经济管理学院">经济管理学院</option>
+                        <option value="现代科技学院">现代科技学院</option>
+                    </select>
+                    <select name="poepleClass2" id="peopleClass2">
+                        <option value="计算机工程系"selected>计算机工程系</option>
+                        <option value="软件工程系">软件工程系</option>
+                    </select>
+                    <select name="peopleClass3" id="peopleClass3">
+                        <option value="计算机科学与技术">计算机科学与技术</option>
+                        <option value="物联网工程">物联网工程</option>
+                    </select>
+                    <input type="button" value="查找" onclick="alert('功能暂未实现')"/>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据所属系别查找</p>
+                </section>
+            </form>
+        </div>
+        <div id="border"></div>
+        <div id="result">
+            <div class="container">
+                <article>
+                    <img src="/static/pictures/c.jpg" alt="for test"/>
+                    <h3>结果1</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/b.jpg" alt="for test"/>
+                    <h3>结果2</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/c.jpg" alt="for test"/>
+                    <h3>结果3</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/d.jpg" alt="for test"/>
+                    <h3>结果4</h3>
+                </article>
+                <div class="clean"></div>
+                <article>
+                    <img src="/static/pictures/myhead.jpg" alt="for test"/>
+                    <h3>结果5</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/b.jpg" alt="for test"/>
+                    <h3>结果6</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/b.jpg" alt="for test"/>
+                    <h3>结果7</h3>
+                </article>
+                <article>
+                    <img src="/static/pictures/b.jpg" alt="for test"/>
+                    <h3>结果8</h3>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clean"></div>
+<footer>
+    <div id="foot_line"></div>
+    <ul>
+        <li>友情链接
+            <ul>
+                <li><a href="#">太原理工大学教务处</a></li>
+                <li><a href="#">太原理工大学勤工助学网站</a></li>
+                <li><a href="#">太原理工大学招就处</a></li>
+                <li><a href="#">龙城学习网站</a></li>
+                <li>太原理工大学学院网站
+                    <ul>
+                        <li><a href="#">计算机学院</a></li>
+                        <li><a href="#">材料学院</a></li>
+                        <li><a href="#">现代科技学院</a></li>
+                        <li><a href="#">马克思学院</a></li>
+                        <li><a href="#">数学学院</a></li>
+                        <li><a href="#">经济管理学院</a></li>
+                        <li><a href="#">软件学院</a></li>
+                        <li><a href="#">信息学院</a></li>
+                        <li><a href="#">建工学院</a></li>
+                        <li><a href="#">外国语学院</a></li>
+                        <li><a href="#">矿业学院</a></li>
+                        <li><a href="#">美术学院</a></li>
+                        <li><a href="#">音乐学院</a></li>
+                        <li><a href="#">体育学院</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            工大社区
+            <ul>
+                <li><a href="#">百度贴吧</a></li>
+            </ul>
+        </li>
+        <li>推荐阅读
+            <ul>
+                <li><a href="#">数学之美</a></li>
+                <li><a href="#">不能承受的生命之轻</a></li>
+                <li><a href="#">css设计指南</a></li>
+                <li><a href="#">编程之美</a></li>
+                <li><a href="#">JavaScript高级程序设计</a></li>
+            </ul>
+        </li>
+        <li>联系我们
+            <ul>
+                <li><a href="#">新浪微博</a></li>
+                <li><a href="#">微信公众号</a></li>
+                <li><a href="#">github地址</a></li>
+                <li><a href="#">osChina博客</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div id="ending_line">
+        <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+    </div>
+</footer>
+</body>
+</html>

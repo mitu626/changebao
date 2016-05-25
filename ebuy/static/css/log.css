@@ -1,0 +1,35 @@
+div#main article{
+    border: 5px solid bisque;
+    margin: 60px 0px 80px -140px;
+    width:360px;
+    border-radius: 20px;
+    float:left;
+}
+div#main article div#inner_line{
+    margin:3px;
+    border:1.5px dashed cadetblue;
+    padding:20px 22px 40px 22px;
+    border-radius: 19px;
+}
+div#main article h3{
+    font-family: a0Font;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 600;
+}
+div#main article p{
+    font-family: b0Font;
+    font-size: 0.9em;
+    line-height: 22px;
+    letter-spacing: 0.22em;
+}
+#clean{
+    clear:both;
+}
+div#register{
+    float:right;
+    margin:60px 120px 80px 0px;
+    border: 1px dashed cadetblue;
+    border-radius:20px;
+}

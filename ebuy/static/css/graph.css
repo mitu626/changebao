@@ -1,0 +1,64 @@
+#aside h3{
+    text-align: center;
+    margin-top:10px;
+}
+#aside section div h5{
+    display:none;
+}
+#aside section div:first-child{
+    width:160px;
+    margin:17px auto;
+    overflow:hidden;
+}
+#aside section div #graph_1_1,
+#aside section div #graph_1_2,
+#aside section div #graph_1_3{
+    width:10px;
+    height:10px;
+    border:2px solid #000000;
+    float:left;
+    border-radius:10px;
+    margin-right:40px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#aside section div #graph_1_1{
+    margin-left:20px;
+}
+#aside section div #graph_1_3{
+    margin-right:20px;
+}
+#aside section #graph_1_4{
+    clear: both;
+    width:80%;
+    margin-left:10%;
+    height:6px;
+    border-radius:6px;
+    border:0.5px solid #555555;
+    position: relative;
+    margin-bottom:50px;
+}
+#zero{
+    position: absolute;
+    top:100%;
+    left:-5px;
+    font-size: 0.9em;
+}
+#hundred{
+    position: absolute;
+    top: 100%;
+    right:-13px;
+    font-size:0.9em;
+}
+section.graph h5{
+    display:block;
+    margin-left:12px;
+}
+section.graph div{
+    width:90%;
+    height:300px;
+    border:0.8px solid coral;
+    margin-left:5%;
+    margin-top:10px;
+    margin-bottom:20px;
+}

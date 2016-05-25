@@ -1,0 +1,181 @@
+nav#user{
+    width:100%;
+    height: 40px;
+    background-color: khaki;
+    font-family: a0Font;
+    position:relative;
+    border-top: 1px solid khaki;
+}
+nav#user ul{
+    margin-right: 100px;
+    margin-top:12px;
+}
+nav#user ul li a{
+    text-decoration:none;
+    color:#000000;
+}
+nav#user ul li a:hover{
+    color:#999999;
+}
+nav#user  ul li{
+    list-style-type: none;
+    float: right;
+    line-height: 22px;
+    padding-right:10px;
+    padding-left:10px;
+    font-family: a0Font;
+    font-weight: 700;
+    border-right: 1px solid #000000;
+}
+nav#user  ul li:first-child{
+    border:0px;
+}
+div#item{
+    margin-left: 3%;
+    margin-top:40px;
+    width:68%;
+    padding:20px;
+    float:left;
+}
+#left{
+    width:340px;
+    float:left;
+}
+.direction{
+    line-height:40px;
+    text-align: left;
+    font-family: a0Font;
+    font-size:1.0em;
+    font-weight: 100;
+    margin-left:20px;
+    font-weight:700;
+}
+.direction span{
+    margin-left:15px;
+}
+.direction span:first-child{
+    margin-left:0px;
+}
+#right{
+    float:left;
+}
+#right ul{
+    margin-left:20px;
+}
+#right ul li{
+    list-style-type: none;
+    line-height: 25px;
+    font-family: a0Font;
+}
+#right p{
+    font-family: a0Font;
+    margin-top:15px;
+    margin-left:20px;
+    line-height:45px;
+    font-size:1.5em;
+    font-weight:700;
+}
+#recommendation{
+    border:1px solid #ff0000;
+    width:23%;
+    float:left;
+    margin-top:30px;
+}
+#recommendation p{
+    width:100%;
+    line-height:40px;
+    background-color: #ff0000;
+    text-align:left;
+    color: black;
+    font-family: b0Font;
+    font-size: 1.2em;
+    font-weight: 500px;
+    letter-spacing: .05em;
+}
+#recommendation article img{
+    width:100%;
+    height:160px;
+}
+#recommendation article{
+    width:90%;
+    margin-left:4%;
+    margin-top:12px;
+}
+#recommendation article:last-child{
+    margin-bottom:25px;}
+section#comment{
+    border:1px solid darkcyan;
+    margin-top:24px;
+}
+section#comment>p{
+    background-color: darkcyan;
+    line-height:40px;
+    font-family: b0Font;
+    font-size:1.2em;
+    letter-spacing: .05em;
+}
+section#comment form{
+    position:relative;
+    margin:40px 10px 20px 10px;
+}
+input.button{
+    width:80px;
+    height:30px;
+    font-family:a0Font;
+    font-size:1.3em;
+    letter-spacing:0.1em;
+    outer_line:none;
+    position:absolute;
+    bottom:5px;
+    right:5px;
+}
+section#comment article{
+    margin:12px 10px;
+    font-family:enFont;
+    font-size:1.2em;
+    color:#888;
+    border:1px solid #ddd;
+    padding:4px 4px 10px 4px;
+    position:relative;
+}
+section#comment article a{
+    text-decoration:none;
+    color:#000;
+    margin-right:4px;
+    font-family:a0Font;
+    font-size:0.83em;
+    font-weight:500;
+}
+section#comment article blockquote{
+    border-left:5px solid lightblue;
+    line-height:36px;
+    padding-left:10px;
+}
+section#comment article div.content{
+    border-left:5px solid bisque;
+    margin-left:24px;
+    padding-left:5px;
+    margin-bottom:20px;
+}
+span.answer{
+    cursor:pointer;
+    color:#fff;
+    text-align:center;
+    background:#bbb;
+    width:30px;
+    height:18px;
+    line-height:10px;
+    font-family:a0Font;
+    font-size:0.9em;
+    letter-spacing:0.05em;
+    outer_line:none;
+    float:right;
+    margin-right:20px;
+    margin-top:4px;
+    border-radius:3px;
+    border:1px solid #aaa;
+}
+span.answer:hover{
+    background:#ddd;
+    color:#000;
+}

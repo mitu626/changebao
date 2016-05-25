@@ -1,0 +1,138 @@
+nav#user{
+    width:100%;
+    height: 40px;
+    background-color: khaki;
+    font-family: a0Font;
+    position:relative;
+    border-top: 1px solid khaki;
+}
+nav#user a{
+    text-decoration:none;
+    color:#000;
+}
+nav#user a:hover{
+    color:#999;
+}
+nav#user ul{
+    margin-right: 100px;
+    margin-top:12px;
+}
+nav#user  ul li{
+    list-style-type: none;
+    float: right;
+    line-height: 22px;
+    padding-right:10px;
+    padding-left:10px;
+    font-family: a0Font;
+    font-weight: 700;
+    border-right: 1px solid #000000;
+}
+nav#user  ul li:first-child{
+    border:0px;
+}
+#userInfo{
+    width:150px;
+    float:left;
+    position:relative;
+    margin-left:40px;
+    padding:15px;
+    background-color:antiquewhite;
+    border-radius:0px 0px 15px 15px;
+    box-shadow: -5px 8px  0px #eeeeee;
+}
+#userInfo ul{
+    margin-top:100px;
+    list-style-type: none;
+}
+#userInfo img{
+    width:80px;
+    height:120px;
+    position:absolute;
+    top:-20px;
+    left:15px;
+}
+div#search{
+    float:left;
+    width:789px;
+}
+div#searchItem{
+    margin-top:20px;
+}
+div#searchItem,
+div#searchPeople{
+    margin-left:40px;
+    font-family: enFont;
+    font-weight:800;
+    font-size:1.2em;
+}
+div#searchItem h5,
+div#searchPeople h5{
+    font-family: b0Font;
+    font-size:1.2em;
+    background-color: cadetblue;
+}
+div#searchItem p,
+div#searchPeople p{
+    font-size:0.85em;
+    font-weight:500;
+    margin-bottom:10px;
+}
+div#searchItem form,
+div#searchPeople form{
+    padding-left: 20px;
+    padding-right:20px;
+    margin-top:15px;
+}
+div#searchItem section,
+div#searchPeople section{
+    margin-bottom:10px;
+    margin-top:10px;
+}
+div#searchItem section:first-child,
+div#searchPeople section:first-child{
+    border-bottom:5px solid coral;
+}
+div#searchItem input[type="button"],
+div#searchPeople input[type="button"]{
+    width:80px;
+    margin-left: 30px;
+}
+div#searchItem input[type="text"],
+div#searchPeople input[type="text"]{
+    width:120px;
+    height:23px;;
+}
+div#searchItem  form section select,
+div#searchPeople form section select{
+    width:120px;
+    margin-right:10px;
+}
+#class3{
+display:none;
+}
+div#border{
+    height:8px;
+    background-color:cadetblue;
+    margin-left:40px;
+    margin-top:30px;
+}
+div#result{
+    border:2px dotted cadetblue;
+    margin:8px 0px 50px 40px;
+    padding:20px 40px 0px 25px;
+    overflow: hidden;
+}
+div#result article{
+    float:left;
+    margin-left:15px;
+    margin-bottom:20px;
+}
+div#result article img{
+    height:120px;
+    width:155px;
+}
+div#result article h3{
+    line-height:20px;
+    text-align: center;
+    font-family: b1Font;
+}

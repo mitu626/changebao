@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆和注册</title>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <link rel="stylesheet" href="/static/css/head_foot.css"/>
+    <link rel="stylesheet" href="/static/css/log.css"/>
+    <link rel="stylesheet" href="/static/css/form.css"/>
+    <script type="text/javascript">
+        function showRegister()
+        {
+            var login=document.getElementById("register").firstElementChild;
+            var register=document.getElementById("register").lastElementChild;
+            login.style.display="none";
+            register.style.display="block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="http://changebao.com">ChangeBao</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">说明</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <article>
+            <div id="inner_line">
+            <h3>网站声明</h3>
+            <p>本文在腾讯微博开放平台之上，探究了针对腾讯微博单条微博的数据分析和研究方法，
+                并使用Python和Protovis建立了一个自动化的可视化分析环境，选用力牵引图对转发过程进行可视化。
+                用户将微博ID传给分析工具，分析工具通过Oauth2获取用户鉴权后，使用获得的access_token和open_id访问的数据库接口，
+                获取微博的转发列表。并通过Python将获得的转发数据进行清洗，转化为树形结构，
+                然后使用Protovis对树形结构的数据进行可视化的展现。
+                将传统的数据分析和可视化的数据分析方法相结合，挖掘转发过程中的关键用户，
+                对个人用户进行自我微博分析和微博营销的企业进行营销总结提供了一个新的思路和方法，
+                并为可视化技术在web数据挖掘中的应用提供了一个新的实例。
+            </p>
+            </div>
+        </article>
+        <div id="register">
+            <form action="#" class="stylin_form1">
+                <h3>ChangeBao1.0</h3>
+                <fieldset>
+                    <legend><span>登录表单</span></legend>
+                    <section>
+                        <label for="user_name">用户名</label>
+                        <input type="text" id="user_name" name="user_name" />
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" maxlength="20" />
+                    </section>
+                    <section> <!-- input must be wrapped in a block level element to validate -->
+                        <input type="submit" value="登录"  id="login"/>
+                        <input type="button" value="注册" id="register_button" onclick="showRegister()"/>
+                    </section>
+                </fieldset>
+            </form>
+            <form action="#" class="stylin_form1 labels_left">
+                <h3>ChangeBao1.0</h3>
+                <fieldset>
+                    <legend><span>注册表单</span></legend>
+                    <section>
+                        <p class="note">* 为必填内容</p>
+                        <label for="user_name">用户名<span> *</span></label>
+                        <input type="text" id="user_name" name="user_name" />
+                        <p>请填写真实姓名</p>
+                    </section>
+                    <section>
+                        <label for="password">密码<span> *</span></label>
+                        <input type="password" id="password" name="password" maxlength="20" />
+                        <p>密码位数不低于8位</p>
+                    </section>
+                    <section>
+                        <label for="email">邮箱<span> *</span></label>
+                        <input type="text" id="email" name="email" maxlength="20" />
+                        <p>请选择您的注册邮箱</p>
+                    </section>
+                    <section>
+                        <label for="special_date">入学日期</label>
+                        <input type="date" id="special_date" name="event_date" min="2012-09-05" />
+                        <p>请选择您的入学日期</p>
+                    </section>
+                    <section>
+                        <label for="select_choice">所在院系</label>
+                        <select id="select_choice" name="select_choice">
+                            <option value="0">计算机学院</option>
+                            <option value="1">信息学院</option>
+                            <option value="2">材料学院</option>
+                            <option value="3">建工学院</option>
+                            <option value="4">现代科技学院</option>
+                            <option value="4">外国语学院</option>
+                            <option value="4">马克思学院</option>
+                            <option value="4">数学学院</option>
+                            <option value="4">矿业学院</option>
+                            <option value="4">美术学院</option>
+                            <option value="4">经济管理学院</option>
+                            <option value="4">音乐学院</option>
+                            <option value="4">体育学院</option>
+                            <option value="4">软件学院</option>
+                        </select>
+                    </section>
+                    <section>
+                        <h4>我感兴趣的是</h4>
+                        <section>
+                            <input type="checkbox" id="check1" name="checkset" value="1" tabindex="4" />
+                            <label for="check1">英雄联盟、NBA</label>
+                        </section>
+                        <section>
+                            <input type="checkbox" checked="checked" id="check2" name="checkset" value="2" />
+                            <label for="check2">美妆、美甲、潮流服饰</label>
+                        </section>
+                        <section>
+                            <input type="checkbox"  id="check3" name="checkset" value="3" />
+                            <label for="check3">小说、文学、专业课程</label>
+                        </section>
+                        <p>只要您对某项中的一个话题感兴趣就可以选择</p>
+                    </section>
+                    <section>
+                        <input type="submit" value="提交信息" id="register_submit"/>
+                    </section>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div id="clean"></div>
+    <footer>
+        <div id="foot_line"></div>
+        <ul>
+            <li>友情链接
+                <ul>
+                    <li><a href="#">太原理工大学教务处</a></li>
+                    <li><a href="#">太原理工大学勤工助学网站</a></li>
+                    <li><a href="#">太原理工大学招就处</a></li>
+                    <li><a href="#">龙城学习网站</a></li>
+                    <li>太原理工大学学院网站
+                        <ul>
+                            <li><a href="#">计算机学院</a></li>
+                            <li><a href="#">材料学院</a></li>
+                            <li><a href="#">现代科技学院</a></li>
+                            <li><a href="#">马克思学院</a></li>
+                            <li><a href="#">数学学院</a></li>
+                            <li><a href="#">经济管理学院</a></li>
+                            <li><a href="#">软件学院</a></li>
+                            <li><a href="#">信息学院</a></li>
+                            <li><a href="#">建工学院</a></li>
+                            <li><a href="#">外国语学院</a></li>
+                            <li><a href="#">矿业学院</a></li>
+                            <li><a href="#">美术学院</a></li>
+                            <li><a href="#">音乐学院</a></li>
+                            <li><a href="#">体育学院</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                工大社区
+                <ul>
+                    <li><a href="#">百度贴吧</a></li>
+                </ul>
+            </li>
+            <li>推荐阅读
+                <ul>
+                    <li><a href="#">数学之美</a></li>
+                    <li><a href="#">不能承受的生命之轻</a></li>
+                    <li><a href="#">css设计指南</a></li>
+                    <li><a href="#">编程之美</a></li>
+                    <li><a href="#">JavaScript高级程序设计</a></li>
+                </ul>
+            </li>
+            <li>联系我们
+                <ul>
+                    <li><a href="#">新浪微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">github地址</a></li>
+                    <li><a href="#">osChina博客</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="ending_line">
+            <p>版权所有<b>&copy;</b>2016 &nbsp;&nbsp;&nbsp;&nbsp;ChangeBao 1.0 created by 大飞哥</p>
+        </div>
+    </footer>
+</body>
+</html>

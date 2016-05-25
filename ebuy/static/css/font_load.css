@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'enFont';
+    src: url('/static/font/enFont.ttf');
+    src: local('enFont'),
+}
+@font-face {
+    font-family: 'a0Font';
+    src: url('/static/font/a0.ttf');
+    src: local('a0Font'),
+}
+@font-face {
+    font-family: 'b0Font';
+    src: url('/static/font/b0.ttf');
+    src: local('b0Font'),
+}
+@font-face {
+    font-family: 'b1Font';
+    src: url('/static/font/b1.TTF');
+    src: local('b1Font'),
+}

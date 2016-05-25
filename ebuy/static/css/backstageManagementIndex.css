@@ -1,0 +1,171 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+    font-family: a0Font;
+}
+#main{
+    width:100%;
+}
+#titleLan{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background-color: brown;
+}
+#titleLan div{
+    float:right;
+    margin-right:40px;
+    font-family: enFont;
+    cursor:pointer;
+}
+#titleLan a{
+    float:left;
+    margin-left:30px;
+    cursor: pointer;
+}
+#titleLan a:first-child{
+    margin-right:-20px;
+}
+#titleLan a:hover{
+    color:#aaaaaa;
+}
+.main{
+    margin:0px auto;
+    background-color: darkslategray;
+    padding:10px 20px;
+    font-family: a0Font;
+}
+.main .title{
+    height:35px;
+    background-color: darkseagreen;
+    border-radius:4px;
+}
+.main .title h3{
+    margin-left:20px;
+    line-height:35px;
+    float:left;
+}
+.main a{
+    width:80px;
+    height:25px;
+    background-color:#eee;
+    border:1px solid #aaa;
+    border-radius:4px;
+    line-height:25px;
+    text-align: center;
+    color:#777;
+    display: inline-block;
+}
+.main .title a{
+    padding:0px;
+    float:right;
+    margin-right:10px;
+    margin-top:5px;
+}
+.main a:hover{
+    color:#000;
+    background-color:#ddd;
+    border-color:#999;
+}
+.main .content{
+    margin-top:10px;
+    margin-bottom:15px;
+    padding:8px 5px;
+    background-color: white;
+    border-radius:4px;
+}
+#broadcast a:last-child{
+    margin-right:10px;
+}
+#broadcast article{
+    background-color:#dddddd;
+    margin-bottom:4px;
+    border-radius:4px;
+    overflow: hidden;
+    padding:4px 8px;
+}
+#broadcast span{
+    float:right;
+    margin-right:20px;
+}
+#broadcast textarea{
+    width:100%;
+}
+#broadcast #create{
+    position:relative;
+}
+#broadcast #create a{
+    position: absolute;
+    bottom:5px;
+    right:5px;
+}
+#broadcast #create{
+    display: none;
+}
+#checkItem article,
+#itemQuery article{
+    overflow: hidden;
+    margin:0px 10px 10px 10px;
+    cursor: pointer;
+    border-bottom:4px solid #bbbbbb;
+}
+#checkItem article:last-child,
+#itemQuery article:last-child{
+    border:0px;
+}
+#itemQuery article h5{
+    line-height:20px;
+    font-size:1.0em;
+}
+#itemQuery article p{
+    font-family:a0Font;
+    font-size:0.95em;
+    line-height:18px;
+}
+#itemQuery article span{
+    float:right;
+    margin-right:10px;
+}
+#checkItem article a{
+    float:right;
+    margin-right:10px;
+    margin-bottom:5px;
+}
+#items #checkItem{
+    display:none;
+}
+.people article{
+    clear: both;
+    height:35px;
+    cursor: pointer;
+}
+.people article:first-child{
+    margin-top:10px;
+}
+.people article div:first-child{
+    float:left;
+    margin-left:40px;
+}
+.people article div:last-child{
+    float:right;
+    margin-right:10px;
+}
+.people h5{
+    display:inline-block;
+    font-size:1.0em;
+}
+.people h5,
+.people span{
+    margin-right:80px;
+}
+.people a{
+    margin-left: 10px;
+}
+#people #onlinePeople,
+#people #allPeople{
+    display:none;
+}

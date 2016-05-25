@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台界面</title>
+    <link rel="stylesheet" href="/static/css/backstageManagementIndex.css"/>
+    <link rel="stylesheet" href="/static/css/font_load.css"/>
+    <script type="text/javascript" src="/static/js/backstageManagementIndex.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="titleLan">
+            <a href="javascript:;">注销</a>
+            <a href="javascript:;">首页</a>
+            <div>时间:<span>2016-04-29</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 地点：<span>山西省太原市</span></div>
+        </div>
+        <div id="broadcast" class="main">
+            <div class="title">
+                <h3>系统公告</h3>
+                <a href="javascript:;" onclick="changeShow(event,0)">查看</a>
+                <a href="javascript:;"onclick="changeShow(event,1)">发布</a>
+            </div>
+            <div class="content">
+                <section id="query">
+                    <article>
+                        <p>这里是公告的内容，for example：临近毕业，欢迎毕业生发布新品，欢迎学弟学妹入手宝贝。</p>
+                        <span>2016-04-18</span>
+                    </article>
+                    <article>
+                        <p>这又是第二条公告，临近毕业，欢迎毕业生发布新品，欢迎学弟学妹入手宝贝。</p>
+                        <span>2016-04-19</span>
+                    </article>
+                </section>
+                <section id="create">
+                    <textarea name="message" id="createMsg" cols="30" rows="10" placeholder="请输入将要发布的公告信息"></textarea>
+                    <a href="javascript:;">发布公告</a>
+                </section>
+            </div>
+        </div>
+        <div id="items" class="main">
+            <div class="title">
+                <h3>商品管理</h3>
+                <a href="javascript:;" onclick="changeShow(event,0)">查看</a>
+                <a href="javascript:;" onclick="changeShow(event,1)">审核</a>
+            </div>
+            <div class="content">
+                <section id="itemQuery">
+                    <article>
+                        <h5>http权威指南(人民邮电出版社)</h5>
+                        <p>Web客户端通常会打开到同一个站点的链接。比如，一个web页面上的大部分内嵌图片通常都来自同一个web站点，
+                        而且相当一部分指向其他对象的超链接通常都指向同一个站点。因此，初始化了对某服务器HTTP请求的应用程序很可能会在不久的将来对那台服务器
+                        发起更多的请求（比如，获取在线图片）。这种性质被称为站点局限性。</p>
+                        <span title="发布日期">2016-04-17</span><span title="最后活跃日期">2016-04-29</span>
+                    </article>
+                    <article>
+                        <h5>http权威指南(人民邮电出版社)</h5>
+                        <p>Web客户端通常会打开到同一个站点的链接。比如，一个web页面上的大部分内嵌图片通常都来自同一个web站点，
+                            而且相当一部分指向其他对象的超链接通常都指向同一个站点。因此，初始化了对某服务器HTTP请求的应用程序很可能会在不久的将来对那台服务器
+                            发起更多的请求（比如，获取在线图片）。这种性质被称为站点局限性。</p>
+                        <span title="发布日期">2016-04-17</span><span title="最后活跃日期">2016-04-29</span>
+                    </article>
+                </section>
+                <section id="checkItem">
+                    <article>
+                        <h5>http权威指南(人民邮电出版社)</h5>
+                        <p>Web客户端通常会打开到同一个站点的链接。比如，一个web页面上的大部分内嵌图片通常都来自同一个web站点，
+                            而且相当一部分指向其他对象的超链接通常都指向同一个站点。因此，初始化了对某服务器HTTP请求的应用程序很可能会在不久的将来对那台服务器
+                            发起更多的请求（比如，获取在线图片）。这种性质被称为站点局限性。</p>
+                        <a href="javascript:;">查看详细</a><a href="javascript:;">拒绝</a><a href="javascript:;">通过</a>
+                    </article>
+                    <article>
+                        <h5>http权威指南(人民邮电出版社)</h5>
+                        <p>Web客户端通常会打开到同一个站点的链接。比如，一个web页面上的大部分内嵌图片通常都来自同一个web站点，
+                            而且相当一部分指向其他对象的超链接通常都指向同一个站点。因此，初始化了对某服务器HTTP请求的应用程序很可能会在不久的将来对那台服务器
+                            发起更多的请求（比如，获取在线图片）。这种性质被称为站点局限性。</p>
+                        <a href="javascript:;">查看详细</a><a href="javascript:;">拒绝</a><a href="javascript:;">通过</a>
+                    </article>
+                    <article>
+                        <h5>http权威指南(人民邮电出版社)</h5>
+                        <p>Web客户端通常会打开到同一个站点的链接。比如，一个web页面上的大部分内嵌图片通常都来自同一个web站点，
+                            而且相当一部分指向其他对象的超链接通常都指向同一个站点。因此，初始化了对某服务器HTTP请求的应用程序很可能会在不久的将来对那台服务器
+                            发起更多的请求（比如，获取在线图片）。这种性质被称为站点局限性。</p>
+                        <a href="javascript:;">查看详细</a><a href="javascript:;">拒绝</a><a href="javascript:;">通过</a>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div id="people" class="main">
+            <div class="title">
+                <h3>用户管理</h3>
+                <a href="javascript:;" onclick="changeShow(event,0)">审核用户</a>
+                <a href="javascript:;" onclick="changeShow(event,1)">在线用户</a>
+                <a href="javascript:;" onclick="changeShow(event,2)">全部用户</a>
+            </div>
+            <div class="content">
+                <section id="checkPeople" class="people">
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                        <div><a href="javascript:;">通过</a><a href="javascript:;">拒绝</a><a href="javascript:;">查看详细</a></div>
+                    </article>
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                        <div><a href="javascript:;">通过</a><a href="javascript:;">拒绝</a><a href="javascript:;">查看详细</a></div>
+                    </article>
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                        <div><a href="javascript:;">通过</a><a href="javascript:;">拒绝</a><a href="javascript:;">查看详细</a></div>
+                    </article>
+                </section>
+                <section id="onlinePeople" class="people">
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>活跃度:70</span></div>
+                        <div><a href="javascript:;">查看详细</a></div>
+                    </article>
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>活跃度:70</span></div>
+                        <div><a href="javascript:;">查看详细</a></div>
+                    </article>
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>活跃度:70</span></div>
+                        <div><a href="javascript:;">查看详细</a></div>
+                    </article>
+                </section>
+                <section id="allPeople" class="people">
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                        <div><a href="javascript:;">查看详细</a></div>
+                    </article>
+                    <article>
+                        <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                        <div><a href="javascript:;">查看详细</a></div>
+                    </article><article>
+                    <div><h5>王益飞</h5><span>计算机科学与技术学院</span><span>2016-04-29</span></div>
+                    <div><a href="javascript:;">查看详细</a></div>
+                </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
